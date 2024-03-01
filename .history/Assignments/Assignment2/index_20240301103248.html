@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> 
+  <style>
+    body{
+      margin-left: 40px;
+      font-family: Arial, sans-serif;
+      
+    }
+    #para{
+      margin-bottom: 40px;
+      list-style: none;
+    }
+   
+
+  </style>
+</head>
+
+<body>
+  
+  <div id="root"></div>
+
+  <script>
+
+    const TopicHeader = () => 
+    React.createElement(
+      'div',
+      null,
+      [
+      React.createElement(
+        'h1', 
+        {id: 'title'},
+        'Topic Covered'
+      ),
+      React.createElement(
+      'p',
+      {id: 'para'},  
+      'The following is a list of all topics covered in the MDN learning area'),
+      
+      ]);
+
+    const TopicDescription = () => React.createElement(
+      'div',
+      null,
+      [
+      React.createElement('div', {id: 'div'},[
+      React.createElement('a', {href: 'http://example.com'}, 'Getting started with the web...'),
+      React.createElement('ul', {}, [
+        React.createElement('li', {id: 'para'}, 'Provide a practical introduction to webdevolepment for complete beginners.'),
+       
+      ]),
+      React.createElement('a', {href: 'http://example.com'}, 'HTML - Structuring the web...'),
+      React.createElement('ul', {}, [
+        React.createElement('li', {id: 'para'}, 'HTML is the language that we use to structure the different parts of our content and define what their meaning or purpose is. This topic teaches HTML in detail.'),
+       
+      ]),
+      React.createElement('a', {href: 'http://example.com'}, 'CSS - Styling the web...'),
+      React.createElement('ul', {}, [
+        React.createElement('li', {id: 'para'}, 'CSS is the language that we usw to control contents style and layout. as well as adding behavior like animation. This topic provides comprehensive coverage of CSS.'),
+       
+      ]),
+      ]),
+      React.createElement('p', {}, ''),]);
+
+    const TopicList = () => React.createElement(
+      'div',
+      null,
+      [
+        
+        
+        
+        
+      ]
+    );
+
+    ReactDOM.render(
+      React.createElement(
+        'div',
+        null,
+        [
+          React.createElement(TopicHeader),
+          React.createElement(TopicDescription),
+          React.createElement(TopicList)
+        ]  
+      ),
+      document.getElementById('root')
+    );
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> 
+  <style>
+    body{
+      margin-left: 40px;
+      font-family: Arial, sans-serif;
+      
+    }
+    #para{
+      margin-bottom: 40px;
+      list-style: none;
+    }
+   
+
+  </style>
+</head>
+
+<body>
+  
+  <div id="root"></div>
+
+  <script>
+
+    const TopicHeader = () => 
+    React.createElement(
+      'div',
+      null,
+      [
+      React.createElement(
+        'h1',
+        {id: 'title'},
+        'Learn web development'
+      ),
+      React.createElement(
+      'p',
+      {id: 'para'},  
+      ''),
+      
+      ]);
+
+    
+
+
+    ReactDOM.render(
+      React.createElement(
+        'div',
+        null,
+        [
+          React.createElement(TopicHeader),
+        ]  
+      ),
+      document.getElementById('root')
+    );
+
+  </script>
+
+</body>
+</html>

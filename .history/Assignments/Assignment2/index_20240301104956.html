@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> 
+  <style>
+    body{
+      margin-left: 40px;
+      font-family: Arial, sans-serif;
+      
+    }
+    #para{
+      margin-bottom: 40px;
+      list-style: none;
+    }
+   
+
+  </style>
+</head>
+
+<body>
+    <div id="root"></div>
+  
+    <script>
+      const TopicHeader = () => (
+        <div>
+          <h1 id='title'>Learn web development</h1>
+          <p id='para'>
+            Welcome to the MDN learning area. This set of articles aims to guide complete beginners to web development.
+          </p>
+          <p id='para'>
+            The aim of this area of MDN is not to take you from "beginner" to "expert" but to
+take you from "beginner" to "comfortable." From there, you should be able to start
+making your way, learning from the rest of MDN, and other intermediate to
+advanced resources that assume a lot of previous knowledge.
+          </p>
+          <p id='para'>
+            If you are a complete beginner, web development can be challenging — we will hold
+your hand and provide enough detail for you to feel comfortable and learn the topics
+properly. You should feel at home whether you are a student learning web
+development (on your own or as part of a class), a teacher looking for class
+materials, a hobbyist, or someone who just wants to understand more about how
+web technologies work.
+          </p>
+        </div>
+      );
+  
+      ReactDOM.render(<TopicHeader />, document.getElementById('root'));
+    </script>
+  </body>
+</html>
