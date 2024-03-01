@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        const TopicHeader = () => <h1 id="title">Topic Covered</h1>;
+        const TopicDescription = () => (
+            <p id="para">The Following is a list of all topics covered in the MDN learning area</p>
+        );
+
+        const TopicList = () => (
+            <div className="App">
+                <h1>Topics Covered</h1>
+                <ul>
+                    <li>Getting started with the web: Provides a practical introduction to web development for complete beginners.</li>
+                    <li>HTML - Structuring the web: HTML is the language that we use to structure the different parts of our content and define what their meaning or purpose is. This topic teaches HTML in detail.</li>
+                    <li>CSS-Styling the web: CSS is the language that we use to control our web content's style and layout, as well as adding behavior like animation. This topic provides comprehensive coverage of CSS.</li>
+                </ul>
+            </div>
+        );
+
+        ReactDOM.render(
+            <div>
+                <TopicHeader />
+                <TopicDescription />
+                <TopicList />
+            </div>,
+            document.getElementById('root')
+        );
+    </script>
+</body>
+</html>

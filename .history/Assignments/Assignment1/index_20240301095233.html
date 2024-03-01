@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> 
+  <style>
+    body{
+      margin-left: 40px;
+      font-family: Arial, sans-serif;
+      
+    }
+
+  </style>
+</head>
+
+<body>
+  
+  <div id="root"></div>
+
+  <script>
+
+    const TopicHeader = () => React.createElement(
+      'h1', 
+      {id: 'title'},
+      'Topic Covered'
+    );
+
+    const TopicDescription = () => React.createElement(
+      'p',
+      {id: 'para'},  
+      'The Following is a list of all topics covered in the MDN learning area'
+    );
+
+    const TopicList = () => React.createElement(
+      'div',
+      null,
+      [
+        
+        
+        React.createElement('a', {href: 'http://example.com'}, 'Getting started with the web...')
+        
+      ]
+    );
+
+    ReactDOM.render(
+      React.createElement(
+        'div',
+        null,
+        [
+          React.createElement(TopicHeader),
+          React.createElement(TopicDescription),
+          React.createElement(TopicList)
+        ]  
+      ),
+      document.getElementById('root')
+    );
+
+  </script>
+
+</body>
+</html>
